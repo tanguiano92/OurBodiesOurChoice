@@ -28,6 +28,7 @@ function setup() {
 
   mySound.setVolume(0.3);
   mySound.play();
+  mySound.loop();
 }
 
 function draw() {
@@ -49,7 +50,7 @@ function draw() {
 
   for (var i = 0; i < pills.length; i++) {
     pills[i].show();
-    pills[i].move();
+    pills[i].update();
     for (var j = 0; j < politicians.length; j++) {
       if (pills[i].hits(politicians[j])) {
         politicians[j].decrease();
@@ -71,15 +72,16 @@ function draw() {
     }
   }
 
+  for (var i = pills.length - 1; i >= 0; i--) {
+    pills[i].update();
+    pills[i].show();
+    if (pills[i].toDelete) {
+      pills.splice(i, 1);
+    }
+  }
+
   lady.show();
   lady.move();
-
-}
-
-for (var i = pills.length - 1; i >= 0; i--) {
-  if (pills[i].toDelete) {
-    pills.splice(i, 1);
-  }
 
 }
 

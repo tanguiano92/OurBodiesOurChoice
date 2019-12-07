@@ -1,17 +1,13 @@
 function Pill(x, y) {
   this.x = x;
   this.y = y;
-  this.r = 6;
+  this.r = 3;
   this.toDelete = false;
 
   this.show = function() {
     noStroke();
     fill(245, 135, 190);
     ellipse(this.x, this.y, this.r * 2, this.r * 2);
-  }
-
-  this.evaporate = function() {
-    this.toDelete = true;
   }
 
   this.hits = function(politician) {
@@ -23,7 +19,11 @@ function Pill(x, y) {
     }
   }
 
-  this.move = function() {
+  this.evaporate = function() {
+    this.toDelete = true;
+  }
+
+  this.update = function() {
     this.x = this.x + 3;
   }
 }
