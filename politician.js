@@ -1,16 +1,17 @@
+'use strict';
 class Politician{
  constructor() {
-  this.r = 60;
+  this.r = 100;
   this.x = width;
   this.y = height - this.r;
  }
 
-  decrease = function(){
-    this.r = this.r - 30*2;
+  decrease(){
+    this.r = this.r - 100;
   }
 
   move() {
-   this.x -= 3;
+   this.x -= 5;
   }
 
   show() {

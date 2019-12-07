@@ -1,8 +1,12 @@
+'use strict';
+
 let lady;
 let pills = [];
 let politicians = [];
 let gImg;
 let pImg;
+let mySound;
+let state = 'title';
 
 var bgImg;
 var x1 = 0;
@@ -21,18 +25,19 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 400);
+  createCanvas(800, 450);
+
   lady = new Lady();
 
   x2 = width;
 
-  mySound.setVolume(0.3);
+  mySound.setVolume(0.2);
   mySound.play();
   mySound.loop();
 }
 
 function draw() {
-  background(0);
+background(0);
 
   image(bgImg, x1, 0, width, height);
   image(bgImg, x2, 0, width, height);
@@ -64,19 +69,19 @@ function draw() {
     politicians.push(new Politician());
   }
 
-  for (let p of politicians) {
-    p.move();
-    p.show();
-    if (lady.hits(p)) {
-      console.log('Game over!');
-    }
-  }
-
   for (var i = pills.length - 1; i >= 0; i--) {
     pills[i].update();
     pills[i].show();
     if (pills[i].toDelete) {
       pills.splice(i, 1);
+    }
+  }
+
+  for (let p of politicians) {
+    p.move();
+    p.show();
+    if (lady.hits(p)) {
+      console.log('Game over!');
     }
   }
 

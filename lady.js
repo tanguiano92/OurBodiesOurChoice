@@ -1,6 +1,7 @@
+'use strict';
 class Lady {
  constructor(){
-   this.r = 70 ;
+   this.r = 100;
    this.x = 50;
    this.y = height - this.r;
    this.vy = 0;
