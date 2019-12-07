@@ -15,7 +15,7 @@ var scrollSpeed = 3;
 
 function preload() {
   gImg = loadImage('images/hpants_girl 1-1.png');
-  pImg = loadImage('images/special agent 1.jpg');
+  pImg = loadImage('images/secret agent.png');
   bgImg = loadImage("images/bg.jpg");
   mySound = loadSound('audio/civilized_villans.mp3');
 }
