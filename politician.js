@@ -1,12 +1,12 @@
 class Politician{
  constructor() {
-  this.r = 100;
+  this.r = 60;
   this.x = width;
   this.y = height - this.r;
  }
 
   decrease = function(){
-    this.r = this.r / 30;
+    this.r = this.r - 30*2;
   }
 
   move() {

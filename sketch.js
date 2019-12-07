@@ -60,7 +60,7 @@ function draw() {
     }
   }
 
-  if (random(1) < 0.005) {
+  if (random(1) < 0.008) {
     politicians.push(new Politician());
   }
 
