@@ -6,7 +6,6 @@ let politicians = [];
 let gImg;
 let pImg;
 let mySound;
-let state = 'title';
 
 var bgImg;
 var x1 = 0;
@@ -31,7 +30,7 @@ function setup() {
 
   x2 = width;
 
-  mySound.setVolume(0.2);
+  mySound.setVolume(0.1);
   mySound.play();
   mySound.loop();
 }
