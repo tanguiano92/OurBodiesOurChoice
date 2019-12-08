@@ -24,7 +24,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800, 450);
+  createCanvas(windowWidth, windowHeight);
 
   lady = new Lady();
 
