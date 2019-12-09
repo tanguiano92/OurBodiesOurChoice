@@ -57,7 +57,7 @@ background(0);
   for (var i = 0; i < pills.length; i++) {
     pills[i].show();
     pills[i].update();
-    for (var j = 0; j < politicians.length; j++) {
+    for (var j = 0; j < politicians.length - 1; j++) {
       if (pills[i].hits(politicians[j])) {
         politicians[j].decrease();
         pills[i].evaporate();

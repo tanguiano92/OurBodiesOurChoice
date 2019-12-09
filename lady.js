@@ -5,7 +5,7 @@ class Lady {
    this.x = 50;
    this.y = height - this.r;
    this.vy = 0;
-   this.gravity = 1;
+   this.gravity = 0.8;
    }
 
   jump() {

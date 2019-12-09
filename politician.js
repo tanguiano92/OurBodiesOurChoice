@@ -11,7 +11,7 @@ class Politician{
   }
 
   move() {
-   this.x -= 5;
+   this.x -= 8;
   }
 
   show() {

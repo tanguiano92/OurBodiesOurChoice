@@ -25,6 +25,6 @@ function Pill(x, y) {
   }
 
   this.update = function() {
-    this.x = this.x + 3;
+    this.x = this.x + 2;
   }
 }
