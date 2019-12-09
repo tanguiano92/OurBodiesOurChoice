@@ -14,7 +14,9 @@ var x2;
 var scrollSpeed = 3;
 
 
-
+function resetGame() {
+    lady = new Lady();
+}
 
 function preload() {
   gImg = loadImage('images/hpants_girl 1-1.png');
@@ -26,7 +28,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  lady = new Lady();
+  resetGame();
 
   x2 = width;
 
@@ -81,6 +83,9 @@ background(0);
     p.show();
     if (lady.hits(p)) {
       console.log('Game over!');
+    if (lady.intersects(p)) {
+      resetGame();
+    }
     }
   }
 
