@@ -64,7 +64,7 @@ background(0);
     }
   }
 
-  if (random(1) < 0.008) {
+  if (random(1) < 0.01) {
     politicians.push(new Politician());
   }
 
