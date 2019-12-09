@@ -1,4 +1,5 @@
 'use strict';
+// game components compiled from Dan Shiffman Coding Train tutorials
 class Politician{
  constructor() {
   this.r = 100;

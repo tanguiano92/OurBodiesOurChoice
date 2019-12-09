@@ -1,4 +1,5 @@
 'use strict';
+// game components compiled from Dan Shiffman Coding Train tutorials
 function Pill(x, y) {
   this.x = x;
   this.y = y;

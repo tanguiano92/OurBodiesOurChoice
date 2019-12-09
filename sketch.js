@@ -1,5 +1,7 @@
 'use strict';
 
+// game components compiled from Dan Shiffman Coding Train tutorials
+
 let lady;
 let pills = [];
 let politicians = [];
@@ -18,6 +20,7 @@ function resetGame() {
     lady = new Lady();
 }
 
+// civilized_villians sound by Eric Taylor
 function preload() {
   gImg = loadImage('images/hpants_girl 1-1.png');
   pImg = loadImage('images/secret agent.png');
