@@ -8,7 +8,7 @@ function Pill(x, y) {
 
   this.show = function() {
     noStroke();
-    fill(245, 135, 190);
+    fill(255, 215, 0);
     ellipse(this.x, this.y, this.r * 2, this.r * 2);
   }
 

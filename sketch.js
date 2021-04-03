@@ -22,10 +22,10 @@ function resetGame() {
 
 // civilized_villians sound by Eric Taylor
 function preload() {
-  gImg = loadImage('images/hpants_girl 1-1.png');
-  pImg = loadImage('images/secret agent.png');
+  gImg = loadImage('images/Goth Dude-3.png.png');
+  pImg = loadImage('images/zombie-4.png.png');
   bgImg = loadImage("images/bg.jpg");
-  mySound = loadSound('audio/civilized_villans.mp3');
+  mySound = loadSound('audio/music.wav');
 }
 
 function setup() {
