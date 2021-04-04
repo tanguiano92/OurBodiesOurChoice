@@ -97,9 +97,9 @@ background(0);
 
 }
 
-function keyPressed() {
+function keyTyped() {
 
-  if (keyCode === UP_ARROW) {
+  if (key === 'w') {
     goth.jump();
   } else if (key === ' ') {
     var bullet = new Bullet(goth.x + 15, goth.y + 20);
