@@ -2,28 +2,28 @@
 
 // game components compiled from Dan Shiffman Coding Train tutorials
 
-let lady;
-let pills = [];
-let politicians = [];
+let goth;
+let bullets = [];
+let zombies = [];
 let gImg;
-let pImg;
+let zImg;
 let mySound;
 
 var bgImg;
 var x1 = 0;
 var x2;
 
-var scrollSpeed = 3;
+var scrollSpeed = 2;
 
 
 function resetGame() {
-    lady = new Lady();
+    goth = new Goth();
 }
 
 // civilized_villians sound by Eric Taylor
 function preload() {
   gImg = loadImage('images/Goth Dude-3.png.png');
-  pImg = loadImage('images/zombie-4.png.png');
+  zImg = loadImage('images/zombie-4.png.png');
   bgImg = loadImage("images/Zombie Game Environment1.png");
   mySound = loadSound('audio/music.wav');
 }
@@ -57,52 +57,52 @@ background(0);
   }
 
 
-  for (var i = 0; i < pills.length; i++) {
-    pills[i].show();
-    pills[i].update();
-    for (var j = 0; j < politicians.length - 1; j++) {
-      if (pills[i].hits(politicians[j])) {
-        politicians[j].decrease();
-        pills[i].evaporate();
+  for (var i = 0; i < bullets.length; i++) {
+    bullets[i].show();
+    bullets[i].update();
+    for (var j = 0; j < zombies.length - 1; j++) {
+      if (bullets[i].hits(zombies[j])) {
+        zombies[j].decrease();
+        bullets[i].evaporate();
         console.log('Back up!');
       }
     }
   }
 
   if (random(1) < 0.01) {
-    politicians.push(new Politician());
+    zombies.push(new Zombie());
   }
 
-  for (var i = pills.length - 1; i >= 0; i--) {
-    pills[i].update();
-    pills[i].show();
-    if (pills[i].toDelete) {
-      pills.splice(i, 1);
+  for (var i = bullets.length - 1; i >= 0; i--) {
+    bullets[i].update();
+    bullets[i].show();
+    if (bullets[i].toDelete) {
+      bullets.splice(i, 1);
     }
   }
 
-  for (let p of politicians) {
-    p.move();
-    p.show();
-    if (lady.hits(p)) {
+  for (let z of zombies) {
+    z.move();
+    z.show();
+    if (goth.hits(z)) {
       console.log('Game over!');
-    if (lady.intersects(p)) {
+    if (goth.intersects(z)) {
       resetGame();
     }
     }
   }
 
-  lady.show();
-  lady.move();
+  goth.show();
+  goth.move();
 
 }
 
 function keyPressed() {
 
   if (keyCode === UP_ARROW) {
-    lady.jump();
+    goth.jump();
   } else if (key === ' ') {
-    var pill = new Pill(lady.x + 15, lady.y + 20);
-    pills.push(pill);
+    var bullet = new Bullet(goth.x + 15, goth.y + 20);
+    bullets.push(bullet);
   }
 }

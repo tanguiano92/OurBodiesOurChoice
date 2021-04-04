@@ -1,6 +1,6 @@
 'use strict';
 // game components compiled from Dan Shiffman Coding Train tutorials
-function Pill(x, y) {
+function Bullet(x, y) {
   this.x = x;
   this.y = y;
   this.r = 3;
@@ -12,9 +12,9 @@ function Pill(x, y) {
     ellipse(this.x, this.y, this.r * 2, this.r * 2);
   }
 
-  this.hits = function(politician) {
-    var d = dist(this.x, this.y, politician.x, politician.y);
-    if (d < this.r + politician.r) {
+  this.hits = function(zombie) {
+    var d = dist(this.x, this.y, zombie.x, zombie.y);
+    if (d < this.r + zombie.r) {
       return true;
     } else {
       return false;

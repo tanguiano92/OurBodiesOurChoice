@@ -1,6 +1,6 @@
 'use strict';
 // game components compiled from Dan Shiffman Coding Train tutorials
-class Lady {
+class Goth {
  constructor(){
    this.r = 100;
    this.x = 50;
@@ -15,13 +15,13 @@ class Lady {
    }
   }
 
-  hits(politician) {
+  hits(zombie) {
     let x1 = this.x + this.r * 0.5;
     let y1 = this.y + this.r * 0.5;
-    let x2 = politician.x + politician.r * 0.5;
-    let y2 = politician.y + politician.r * 0.5;
+    let x2 = zombie.x + zombie.r * 0.5;
+    let y2 = zombie.y + zombie.r * 0.5;
 
- return collideCircleCircle(x1, y1, this.r, x2, y2, politician.r);
+ return collideCircleCircle(x1, y1, this.r, x2, y2, zombie.r);
   }
 
   move() {

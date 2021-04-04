@@ -1,6 +1,6 @@
 'use strict';
 // game components compiled from Dan Shiffman Coding Train tutorials
-class Politician{
+class Zombie{
  constructor() {
   this.r = 100;
   this.x = width;
@@ -16,7 +16,7 @@ class Politician{
   }
 
   show() {
-   image(pImg, this.x, this.y, this.r, this.r);
+   image(zImg, this.x, this.y, this.r, this.r);
    noStroke();
    noFill();
    ellipseMode(CORNER);
