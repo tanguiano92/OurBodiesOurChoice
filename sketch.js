@@ -24,7 +24,7 @@ function resetGame() {
 function preload() {
   gImg = loadImage('images/Goth Dude-3.png.png');
   pImg = loadImage('images/zombie-4.png.png');
-  bgImg = loadImage("images/bg.jpg");
+  bgImg = loadImage("images/Zombie Game Environment1.png");
   mySound = loadSound('audio/music.wav');
 }
 
