@@ -16,7 +16,7 @@ var x2;
 var scrollSpeed = 2;
 
 
-function resetGame() {
+function restart() {
     goth = new Goth();
 }
 
@@ -31,7 +31,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  resetGame();
+  restart();
 
   x2 = width;
 
@@ -86,6 +86,7 @@ background(0);
     z.show();
     if (goth.hits(z)) {
       console.log('Game over!');
+      restart();
     if (goth.intersects(z)) {
       resetGame();
     }
